@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário com Eventos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="controls-container">
+        <button id="editEvent">Edit Event</button>
+        <button id="deleteEvent">Delete Event</button>
+        <button id="createEvent">Create Event</button>
+    </div>
+
+    <div id="editEventDiv" class="event-form" style="display: none;">
+        <label for="editEventId">Event ID:</label>
+        <input type="text" id="editEventId" name="id" style="display: none;">
+        
+        <label for="editDate">Date:</label>
+        <input type="date" id="editDate" name="date">
+        
+        <label for="editTitle">Title:</label>
+        <input type="text" id="editTitle" name="title" placeholder="Enter event title">
+        
+        <label for="editDescription">Description:</label>
+        <input type="text" id="editDescription" name="description" placeholder="Enter event description">
+        
+        <div class="form-buttons">
+            <button id="saveEvent">Save</button>
+            <button id="cancelEvent">Cancel</button>
+        </div>
+    </div>
+
+    <div id="deleteEventDiv" class="event-form" style="display: none;">
+        <label for="deleteEventId">Event ID to Delete:</label>
+        <input type="text" id="deleteEventId" name="deleteId" placeholder="Enter event ID">
+        <div class="form-buttons">
+            <button id="deleteEventButton">Delete Event</button>
+        </div>
+    </div>
+
+    <div id="createEventDiv" class="event-form" style="display: none;">
+        <label for="eventDate">Date:</label>
+        <input type="date" id="eventDate" name="date">
+        
+        <label for="eventTile">Title:</label>
+        <input type="text" id="eventTile" name="title" placeholder="Event title">
+        
+        <label for="eventDescription">Description:</label>
+        <input type="text" id="eventDescription" name="description" placeholder="Event description">
+        
+        <div class="form-buttons">
+            <button id="addEvent">Add Event</button>
+        </div>
+    </div>
+
+    <!-- Lista de Eventos -->
+    <div class="events-list-container">
+        <table id="eventsList">
+        </table>
+    </div>
+
+    <div style="padding-top: 10px;">
+        <button id="cancel" style="display: none;">Cancel</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
