@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "start": "ts-node server/server.ts",
-    "dev": "ts-node-dev --respawn --transpile-only server/server.ts"
+    "dev": "ts-node-dev --respawn --transpile-only server/server.ts",
+    "up-db": "prisma migrate dev --schema server/infra/prisma/schema.prisma"
   },
   "dependencies": {
     "@prisma/client": "^6.0.1",
